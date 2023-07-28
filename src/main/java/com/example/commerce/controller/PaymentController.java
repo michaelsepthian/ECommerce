@@ -20,7 +20,7 @@ public class PaymentController {
         return this.paymentService.payment(paymentDto);
     }
 
-    @GetMapping(value = "findAllPayment")
+    @GetMapping(value = "payments")
     public List<Payment> findAll(){
         return this.paymentService.findAll();
     }

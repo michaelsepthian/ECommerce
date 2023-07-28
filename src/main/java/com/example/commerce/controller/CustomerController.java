@@ -15,17 +15,17 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping(value = "addCustomer")
+    @PostMapping(value = "customer")
     public String addCustomer(@RequestBody Customer customer){
         return this.customerService.addCustomer(customer);
     }
 
-    @PutMapping(value = "updateCustomer/{idCustomer}")
+    @PutMapping(value = "customer/{idCustomer}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable("idCustomer") Long idCustomer, @RequestBody Customer customer){
         return this.customerService.updateCustomer(idCustomer, customer);
     }
 
-    @GetMapping(value = "findAllCustomer")
+    @GetMapping(value = "customers")
     public List<Customer> findAllCustomer(){
         return this.customerService.findAll();
     }

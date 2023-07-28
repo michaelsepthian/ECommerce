@@ -16,27 +16,27 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping(value = "addProduct")
+    @PostMapping(value = "product")
     public String addProduct(@RequestBody ProductDto productDto){
         return this.productService.addProduct(productDto);
     }
 
-    @PutMapping(value = "updateProductBrand/{idProduct}")
+    @PutMapping(value = "product/{idProduct}")
     public ResponseEntity<Product> updateProductBrand(@PathVariable("idProduct") Long idProduct, @RequestBody ProductDto productDto){
         return this.productService.updateProductBrand(idProduct, productDto);
     }
 
-    @PutMapping(value = "restock/{idProduct}")
+    @PutMapping(value = "product/restock/{idProduct}")
     public ResponseEntity<Product> restock(@PathVariable("idProduct") Long idProduct, @RequestBody ProductDto productDto){
         return this.productService.updateStock(idProduct, productDto.getStock(), "add");
     }
 
-    @PutMapping(value = "decrementStock/{idProduct}")
+    @PutMapping(value = "product/decrementStock/{idProduct}")
     public ResponseEntity<Product> decrementStock(@PathVariable("idProduct") Long idProduct, @RequestBody ProductDto productDto){
         return this.productService.updateStock(idProduct, productDto.getStock(), "reduce");
     }
 
-    @GetMapping(value = "findAllProduct")
+    @GetMapping(value = "products")
     public List<Product> findAll(){
         return this.productService.findAll();
     }

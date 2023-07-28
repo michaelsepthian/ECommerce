@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ecommerce@localhost" uuid="9b8b9179-d3ac-432a-aa15-2d72eacbf1c5">
+    <data-source source="LOCAL" name="d4tmhnjke4aiqr@ec2-34-239-241-121.compute-1.amazonaws.com" uuid="2ec642f6-7004-4db4-bbad-69fa69b3d70a">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/ecommerce</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-34-239-241-121.compute-1.amazonaws.com:5432/d4tmhnjke4aiqr</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ecommerce@localhost" uuid="09a117f2-dc3d-4e16-9172-4362b48169b4">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5435/ecommerce</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

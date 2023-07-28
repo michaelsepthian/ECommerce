@@ -15,22 +15,22 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
-    @PostMapping(value = "addCart")
+    @PostMapping(value = "cart")
     public String addCart(@RequestBody CartDto cartDto){
         return this.cartService.addCart(cartDto);
     }
 
-    @PutMapping(value = "updateCart/{idCart}")
+    @PutMapping(value = "cart/{idCart}")
     public ResponseEntity<Cart> updateCart(@PathVariable("idCart") Long idCart, @RequestBody CartDto cartDto){
         return this.cartService.updateCart(idCart, cartDto);
     }
 
-    @DeleteMapping(value = "deleteCart/{idCart}")
+    @DeleteMapping(value = "cart/{idCart}")
     public String deleteCart(@PathVariable("idCart") Long idCart){
         return this.cartService.deleteCart(idCart);
     }
 
-    @GetMapping(value = "findAllCart")
+    @GetMapping(value = "carts")
     public List<Cart> findAll(){
         return this.cartService.findAll();
     }

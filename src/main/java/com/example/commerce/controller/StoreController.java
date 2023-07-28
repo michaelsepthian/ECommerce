@@ -16,22 +16,22 @@ public class StoreController {
     @Autowired
     private StoreService storeService;
 
-    @PostMapping(value = "addStore")
+    @PostMapping(value = "store")
     public String addStore(@RequestBody Store store){
         return this.storeService.addStore(store);
     }
 
-    @PutMapping(value = "updateStore/{idStore}")
+    @PutMapping(value = "store/{idStore}")
     public ResponseEntity<Store> updateStore(@PathVariable("idStore") Long idStore, @RequestBody EditStoreDto editStoreDto){
         return this.storeService.updateStore(idStore, editStoreDto.getName(), editStoreDto.getAddress());
     }
 
-    @DeleteMapping(value = "deleteStore/{idStore}")
+    @DeleteMapping(value = "store/{idStore}")
     public String deleteStore(@PathVariable("idStore") Long idStore){
         return this.storeService.deleteStore(idStore);
     }
 
-    @GetMapping(value = "findAllStore")
+    @GetMapping(value = "stores")
     public List<Store> findAll(){
         return this.storeService.findAll();
     }
